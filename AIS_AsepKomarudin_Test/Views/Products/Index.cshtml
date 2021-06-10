@@ -1,0 +1,82 @@
+﻿@model IEnumerable<AIS_AsepKomarudin_Test.Models.ReportProduct>
+
+@{
+    ViewBag.Title = "View";
+}
+
+<h2>Answer of Number One [1]</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Barcode)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Jumlah)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Total_harga)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ready)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.onhold)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.delivered)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.packing)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.sent)
+        </th>
+   
+    </tr>
+
+@foreach (var item in Model)
+{
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Barcode)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Jumlah)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Total_harga)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ready)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.onhold)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.delivered)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.packing)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.sent)
+        </td>
+     
+    </tr>
+}
+
+</table>
+
+<script>
+    var dataNumber = [1,-1,3,-4,5,-2,7,4,2];
+
+    document.write("<h2>Answer of Number Two 2:</h2>");
+
+    var shortNumber = dataNumber.sort().toString();
+    var trimNumber = shortNumber.substring(9);
+    var result = trimNumber.slice(0, 4);
+    var result1 = trimNumber.slice(6, 7);
+    var lastresult = result + result1;
+    document.write(lastresult.split());
+</script>
